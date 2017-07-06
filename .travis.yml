@@ -9,6 +9,6 @@ install:
   - pip install ansible
 script:
   - echo localhost > inventory
-  - ln -s ansible-hosts ../franklinkim.hosts
+  - ln -s ansible-role-hosts ../viasite-ansible.hosts
   - ansible-playbook --syntax-check -i inventory tests/main.yml
   - ansible-playbook -i inventory tests/main.yml --connection=local --become -vvvv

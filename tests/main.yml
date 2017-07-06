@@ -2,7 +2,7 @@
 
 - hosts: all
   roles:
-    - franklinkim.hosts
+    - viasite-ansible.hosts
   vars:
     hosts:
       - { ip: '127.0.0.1', domain: 'foobar1.com' }
