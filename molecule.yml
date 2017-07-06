@@ -1,0 +1,23 @@
+---
+# cannot test with docker: /etc/hosts not writable
+driver:
+  name: vagrant
+vagrant:
+  platforms:
+    - name: xenial64
+      box: bento/ubuntu-16.04
+  providers:
+    - name: virtualbox
+      type: virtualbox
+  instances:
+    - name: vagrant-01
+
+ansible:
+  playbook: tests/playbook.yml
+  group_vars:
+    all:
+      hosts:
+        - { ip: '127.0.0.1', domain: 'foobar1.com' }
+        - { ip: '127.0.0.2', domain: 'foobar2.com' }
+        - { ip: '127.0.0.3', domain: 'foobar3.com', state: absent }
+      hosts_reset: no
