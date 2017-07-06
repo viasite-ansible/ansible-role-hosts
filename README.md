@@ -1,11 +1,6 @@
-# Ansible franklinkim.hosts role
+# Ansible viasite-ansible.hosts role [![Build Status](https://travis-ci.org/viasite-ansible/ansible-role-hosts.png)](https://travis-ci.org/viasite-ansible/ansible-role-hosts)
 
-[![Build Status](https://img.shields.io/travis/weareinteractive/ansible-hosts.svg)](https://travis-ci.org/weareinteractive/ansible-hosts)
-[![Galaxy](http://img.shields.io/badge/galaxy-franklinkim.hosts-blue.svg)](https://galaxy.ansible.com/list#/roles/1371)
-[![GitHub Tags](https://img.shields.io/github/tag/weareinteractive/ansible-hosts.svg)](https://github.com/weareinteractive/ansible-hosts)
-[![GitHub Stars](https://img.shields.io/github/stars/weareinteractive/ansible-hosts.svg)](https://github.com/weareinteractive/ansible-hosts)
-
-> `franklinkim.hosts` is an [Ansible](http://www.ansible.com) role which:
+> `viasite-ansible.hosts` is an [Ansible](http://www.ansible.com) role which:
 >
 > * manages hosts entries
 
@@ -14,19 +9,19 @@
 Using `ansible-galaxy`:
 
 ```shell
-$ ansible-galaxy install franklinkim.hosts
+$ ansible-galaxy install viasite-ansible.hosts
 ```
 
 Using `requirements.yml`:
 
 ```yaml
-- src: franklinkim.hosts
+- src: viasite-ansible.hosts
 ```
 
 Using `git`:
 
 ```shell
-$ git clone https://github.com/weareinteractive/ansible-hosts.git franklinkim.hosts
+$ git clone https://github.com/weareinteractive/ansible-hosts.git viasite-ansible.hosts
 ```
 
 ## Dependencies
@@ -62,7 +57,7 @@ This is an example playbook:
 
 - hosts: all
   roles:
-    - franklinkim.hosts
+    - viasite-ansible.hosts
   vars:
     hosts:
       - { ip: '127.0.0.1', domain: 'foobar1.com' }
