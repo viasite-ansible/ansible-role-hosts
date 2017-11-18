@@ -1,0 +1,23 @@
+---
+driver:
+  name: vagrant
+  provider:
+    name: virtualbox
+platforms:
+  - name: xenial64
+    box: bento/ubuntu-16.04
+
+lint:
+  name: yamllint
+  enabled: False
+
+provisioner:
+  name: ansible
+  inventory:
+    group_vars:
+      all:
+        hosts:
+          - { ip: '127.0.0.1', domain: 'foobar1.com' }
+          - { ip: '127.0.0.2', domain: 'foobar2.com' }
+          - { ip: '127.0.0.3', domain: 'foobar3.com', state: absent }
+        hosts_reset: no
