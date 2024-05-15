@@ -1,6 +1,6 @@
 ---
 
-- include: manage.yml
+- include_tasks: manage.yml
   tags:
     - networking
     - hosts
